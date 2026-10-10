@@ -2,7 +2,7 @@
 
 **When should your agent ask, and when should it just do it?** One drop-in file answers that for every action.
 
-![The autonomy matrix: six rows from "do it silently" to "ask and explain the consequences"](docs/matrix.png)
+![The autonomy matrix as a table](docs/matrix.png)
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-d97757)
@@ -89,7 +89,7 @@ curl -o CLAUDE.md https://raw.githubusercontent.com/nickspiz/autonomy-matrix/mai
 curl -o CLAUDE.md https://raw.githubusercontent.com/nickspiz/autonomy-matrix/main/templates/CLAUDE.team-prod.md
 ```
 
-As a Claude Code plugin (the team and production rules, as a skill):
+You can also install it as a Claude Code plugin. It carries the team and production rules as a skill:
 
 ```text
 /plugin install autonomy-matrix --marketplace nickspiz/autonomy-matrix
