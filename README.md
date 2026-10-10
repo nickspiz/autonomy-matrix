@@ -113,6 +113,10 @@ docs/matrix.png          the matrix as an image (rebuild: python3 docs/render_ma
 
 A hundred rules won't cover every case. One principle the agent can apply to situations you never wrote down will. Reversibility times blast radius is that principle, and the lists above are examples of it.
 
+## Questions and ideas
+
+Have a question or an idea? Start a [discussion](https://github.com/nickspiz/autonomy-matrix/discussions). For bugs, open an [issue](https://github.com/nickspiz/autonomy-matrix/issues/new/choose). See [CONTRIBUTING.md](CONTRIBUTING.md) before sending a pull request.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
