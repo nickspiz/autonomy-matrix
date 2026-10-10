@@ -19,7 +19,7 @@ Agent: Pushed. Now, dropping the coupons table. Running DROP TABLE coupons on pr
 Agent: Done. 1,284 rows deleted. Also force-pushed main to remove a messy commit.
 ```
 
-Four needless questions about harmless steps, then two irreversible actions with no question at all. The coupons table had no backup, and a teammate's commit disappeared from main.
+The agent asked four questions about harmless steps, then took two irreversible actions without asking. The coupons table had no backup, and a teammate's commit disappeared from main.
 
 ## With the matrix
 
@@ -38,4 +38,4 @@ Agent: Backup saved. Archived 311 old rows, 973 remain. Checkout tested, works.
 Agent: One more thing. Main has a messy commit from Dana. I won't force-push to main. If you want it tidier, I can add a follow-up commit.
 ```
 
-Green steps happened silently. The two risky steps got a short, plain explanation and a default. The forbidden step was refused with an alternative.
+The harmless steps ran without comment. The risky step got a short, plain explanation and a recommended default, and the forbidden step was refused with an alternative offered.

@@ -6,9 +6,9 @@
 ![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-d97757)
 ![AGENTS.md](https://img.shields.io/badge/also-AGENTS.md-blue)
 
-Most agents fail in one of two ways. They ask permission to read a file, or they force-push over your teammate's work without a word. Both come from the same gap: nobody told the agent how to judge risk.
+Agents tend to fail in one of two ways. Some ask permission to read a file. Others force-push over a teammate's work without a word. Both happen because nobody told the agent how to judge risk.
 
-This repo gives it a rule you can read in ten seconds. Score every action on two things: **can it be undone**, and **who gets hurt if it goes wrong**.
+This repo gives it a rule you can read in ten seconds. Score every action on two things: can it be undone, and who gets hurt if it goes wrong.
 
 ## The matrix
 
@@ -69,11 +69,11 @@ Always include a default recommendation. Never leave the person with only a ques
 
 People rarely type `/setup-project-x`. They say "let's fix the checkout in Acme". The agent should treat that as the command.
 
-- **Auto-load.** When a message makes the project clear, read that project's `CLAUDE.md` or README and its notes. No slash command needed.
-- **Sticky.** The context is loaded once and stays until you clearly switch ("now about Billing"). One passing mention of another project doesn't flip it.
-- **One at a time.** Sub-topics (deploy, outreach, docs) stack on top of the project instead of replacing it.
-- **Ambiguous? Ask.** If two projects fit, one short question beats a wrong guess.
-- **Speed budget.** Loading context takes seconds, not a minute. Read two or three small files, print a 3 to 7 line summary, and wait for the task. No sub-agents, no network calls, no builds, no `sleep`. Real work starts after the summary, not inside it.
+- When a message makes the project clear, the agent reads that project's `CLAUDE.md` or README and its notes. No slash command needed.
+- The context is loaded once and stays until you clearly switch ("now about Billing"). A passing mention of another project doesn't flip it.
+- Only one project is active at a time. Sub-topics such as deploy or docs stack on top of it instead of replacing it.
+- If two projects fit, the agent asks one short question rather than guessing.
+- Loading takes seconds, not a minute. The agent reads two or three small files, prints a 3 to 7 line summary, and waits for the task. No sub-agents, no network calls, no builds, no `sleep`. Real work starts after the summary.
 
 ## Install
 
@@ -101,7 +101,7 @@ example/
 
 ## Why it works
 
-The agent doesn't need a hundred rules. It needs one principle it can apply to cases you never wrote down. Reversibility times blast radius is that principle. The lists are just examples of it.
+A hundred rules won't cover every case. One principle the agent can apply to situations you never wrote down will. Reversibility times blast radius is that principle, and the lists above are examples of it.
 
 ## License
 
