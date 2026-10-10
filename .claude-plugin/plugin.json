@@ -1,0 +1,10 @@
+{
+  "name": "autonomy-matrix",
+  "version": "0.1.0",
+  "description": "One rule that tells your agent when to just do it and when to ask: reversibility times blast radius.",
+  "author": { "name": "Nikita Spitsyn", "url": "https://github.com/nickspiz" },
+  "homepage": "https://github.com/nickspiz/autonomy-matrix",
+  "repository": "https://github.com/nickspiz/autonomy-matrix",
+  "license": "MIT",
+  "keywords": ["rules", "autonomy", "safety", "agents"]
+}

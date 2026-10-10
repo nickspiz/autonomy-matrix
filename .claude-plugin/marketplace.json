@@ -1,0 +1,12 @@
+{
+  "name": "autonomy-matrix",
+  "description": "Autonomy rules for Claude Code",
+  "owner": { "name": "Nikita Spitsyn", "url": "https://github.com/nickspiz" },
+  "plugins": [
+    {
+      "name": "autonomy-matrix",
+      "source": "./",
+      "description": "Teaches the agent when to act and when to ask, using reversibility and blast radius."
+    }
+  ]
+}

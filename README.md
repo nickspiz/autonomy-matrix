@@ -2,6 +2,8 @@
 
 **When should your agent ask, and when should it just do it?** One drop-in file answers that for every action.
 
+![The autonomy matrix: six rows from "do it silently" to "ask and explain the consequences"](docs/matrix.png)
+
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-d97757)
 ![AGENTS.md](https://img.shields.io/badge/also-AGENTS.md-blue)
@@ -87,6 +89,12 @@ curl -o CLAUDE.md https://raw.githubusercontent.com/nickspiz/autonomy-matrix/mai
 curl -o CLAUDE.md https://raw.githubusercontent.com/nickspiz/autonomy-matrix/main/templates/CLAUDE.team-prod.md
 ```
 
+As a Claude Code plugin (the team and production rules, as a skill):
+
+```text
+/plugin install autonomy-matrix --marketplace nickspiz/autonomy-matrix
+```
+
 Other tools that read `AGENTS.md`: use `templates/AGENTS.solo-safe.md` or `templates/AGENTS.team-prod.md` instead. Already have a CLAUDE.md? Paste the contents under a new heading.
 
 ## What's inside
@@ -97,6 +105,8 @@ templates/
   CLAUDE.team-prod.md    AGENTS.team-prod.md
 example/
   before-after.md        the same session without and with the matrix
+skills/autonomy-matrix/  the plugin skill (team and production rules)
+docs/matrix.png          the matrix as an image (rebuild: python3 docs/render_matrix.py)
 ```
 
 ## Why it works
@@ -106,3 +116,5 @@ A hundred rules won't cover every case. One principle the agent can apply to sit
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+If this helped, a star helps others find it.
