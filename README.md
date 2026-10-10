@@ -89,13 +89,20 @@ curl -o CLAUDE.md https://raw.githubusercontent.com/nickspiz/autonomy-matrix/mai
 curl -o CLAUDE.md https://raw.githubusercontent.com/nickspiz/autonomy-matrix/main/templates/CLAUDE.team-prod.md
 ```
 
-You can also install it as a Claude Code plugin. It carries the team and production rules as a skill:
+You can also install it as a Claude Code plugin. It carries the rules as a skill:
 
 ```text
-/plugin install autonomy-matrix --marketplace nickspiz/autonomy-matrix
+/plugin marketplace add nickspiz/autonomy-matrix
+/plugin install autonomy-matrix@autonomy-matrix
 ```
 
 Other tools that read `AGENTS.md`: use `templates/AGENTS.solo-safe.md` or `templates/AGENTS.team-prod.md` instead. Already have a CLAUDE.md? Paste the contents under a new heading.
+
+## Example prompts
+
+- "Clean up the old uploads folder on the server." Claude explains what, whether it can be undone, and who is affected, then asks.
+- "Fix the failing test in this project." Claude just does it.
+- "Deploy this to production." Claude checks that the work is committed and asks before going ahead.
 
 ## What's inside
 
@@ -105,7 +112,7 @@ templates/
   CLAUDE.team-prod.md    AGENTS.team-prod.md
 example/
   before-after.md        the same session without and with the matrix
-skills/autonomy-matrix/  the plugin skill (team and production rules)
+skills/autonomy-matrix/  the plugin skill
 docs/matrix.png          the matrix as an image (rebuild: python3 docs/render_matrix.py)
 ```
 
@@ -117,8 +124,14 @@ A hundred rules won't cover every case. One principle the agent can apply to sit
 
 Have a question or an idea? Start a [discussion](https://github.com/nickspiz/autonomy-matrix/discussions). For bugs, open an [issue](https://github.com/nickspiz/autonomy-matrix/issues/new/choose). See [CONTRIBUTING.md](CONTRIBUTING.md) before sending a pull request.
 
+## Privacy
+
+The plugin is one skill, a plain text rule. It has no scripts and no hooks. It makes no network calls and sends nothing anywhere. It writes no files. The only thing it reads is what a normal Claude Code session already reads: when you name a project, the skill tells Claude to read that project's `CLAUDE.md` or README from your own disk. The `curl` commands in the Install section are downloads you run yourself, not something the plugin does.
+
+## Support
+
+Questions or bugs: [GitHub Issues](https://github.com/nickspiz/autonomy-matrix/issues) or hello@nickspiz.com.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
-
-If this helped, a star helps others find it.

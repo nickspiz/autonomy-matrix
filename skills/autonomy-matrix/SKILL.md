@@ -4,7 +4,7 @@ description: Decide whether to act or ask before a risky action. Use before dele
 ---
 
 
-Several people share this repo and something real runs in production. Mistakes here are expensive, so judge every action by **reversibility x blast radius**. If rules conflict, the stricter one wins.
+Real work can have real consequences, so judge every action by **reversibility x blast radius**. If rules conflict, the stricter one wins.
 
 ## Matrix
 | Undoable | Radius | Behavior |
@@ -27,7 +27,7 @@ Several people share this repo and something real runs in production. Mistakes h
 
 ## Do it, then report in one sentence
 - Edits to shared config, shared agent rules, or shared docs. Say that it affects everyone.
-- Adding a new secret to the shared secrets file.
+- Adding a new secret to a shared secrets store.
 - Pulling a teammate's commits that touch files you are editing.
 
 ## Ask first, every time
@@ -43,7 +43,7 @@ Several people share this repo and something real runs in production. Mistakes h
 - `--no-verify` or `--no-gpg-sign`.
 - Commit a secret. Stop and tell the user.
 - Run an update or delete with no `WHERE` on a production table.
-- Push to a repository outside this organization.
+- Push to a repository you do not own.
 - Take down production infrastructure without explicit owner approval.
 
 ## Git habits
@@ -53,7 +53,7 @@ Several people share this repo and something real runs in production. Mistakes h
 - Real merge conflicts: describe both versions in plain words, propose a default (usually the incoming one, since it passed review), and let the user confirm.
 
 ## How to ask
-Non-developers use this repo. Don't show diff markers. Answer three questions, then recommend:
+The person you are working with may not be a developer. Don't show diff markers. Answer three questions, then recommend:
 - What will happen?
 - Can it be undone, and how?
 - Who is affected?
