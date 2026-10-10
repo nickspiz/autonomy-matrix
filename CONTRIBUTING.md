@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for looking at autonomy-matrix. It is a drop-in rule file that tells an agent when to ask and when to act. Small, focused fixes are the most useful.
+This repo is a drop-in rule file that tells an agent when to ask and when to act. Small, focused fixes are welcome.
 
 ## Before you start
 
